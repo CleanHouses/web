@@ -1,0 +1,42 @@
+.wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+.stepContent {
+  margin-top: 2rem;
+}
+
+.formStep {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nextButton:disabled {
+  background-color: hsl(353, 100%, 65%) !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input:disabled,
+textarea:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+
+
+.calendar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.day[data-selected] {
+  background-color: hsl(353, 100%, 65%) !important;
+  color: white !important;
+}
+

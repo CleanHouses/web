@@ -1,0 +1,73 @@
+@use "../../../styles/abstracts" as *;
+
+.wrapper {
+  transition: opacity  0.4s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.primary {
+  color: white;
+  background-color: $cl-primary;
+
+  &:hover {
+    background-color: $cl-primary;
+  }
+}
+
+.secondary {
+  color: white;
+  background-color: $cl-secondary;
+
+  &:hover {
+    background-color: $cl-secondary;
+  }
+}
+
+.fio {
+  color: white;
+  background-color: $cl-fio;
+
+  &:hover {
+    background-color: $cl-fio;
+  }
+}
+
+.outline {
+  color: $cl-date;
+  background:none;
+  border: 1px solid $cl-date;
+
+  &:hover {
+    background-color: $cl-date;
+  }
+}
+
+//animate
+
+@keyframes typeAnimate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.animate {
+  background: linear-gradient(
+                  270deg,
+                  $cl-fio,
+                  $cl-secondary,
+                  $cl-primary,
+  );
+  background-size: 600% 600%;
+  padding: 0 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+  animation: typeAnimate 5s ease 0s 2 forwards;
+}
