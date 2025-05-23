@@ -1,45 +1,20 @@
-import React, { FC, FunctionComponent, useContext } from "react";
+import React, { FC, FunctionComponent } from "react";
 
-import { Basket } from "./basket/Basket";
 import styles from "./layout.module.scss";
 import { ILayoutProps } from "./layout.props";
 import { Sidebar } from "./sidebar/Sidebar";
-import { Button, Languages } from "../components";
-import { IMainContext, MainContext, MainContextProvider } from "../context";
+import { Languages } from "../components";
+import { MainContextProvider } from "../context";
 
-export const Layout: FC<ILayoutProps> = ({ children, ...props }) => {
-  const { openBasket, setOpenBasket, basket } = useContext<IMainContext>(MainContext);
-
-  return (
-    <div {...props}>
-      <Sidebar />
-      <main className={styles.main}>
-        <Languages />
-        <Basket
-          opened={openBasket ? openBasket : false}
-          onClose={() => {
-            if (setOpenBasket) {
-              setOpenBasket(false);
-            }
-          }}
-        />
-        <div className={styles.basket_icon}>
-          <Button
-            onClick={() => {
-              if (setOpenBasket) {
-                setOpenBasket(true);
-              }
-            }}
-            variant="secondary"
-            >
-            <i className="icon-basket" />
-          </Button>
-        </div>
-        <div className={styles.container}>{children}</div>
-      </main>
-    </div>
-  );
-};
+export const Layout: FC<ILayoutProps> = ({ children, ...props }) => (
+  <div {...props}>
+    <Sidebar />
+    <main className={styles.main}>
+      <Languages />
+      <div className={styles.container}>{children}</div>
+    </main>
+  </div>
+);
 
 export const withLayout =
   <T extends Record<string, unknown>>(Component: FunctionComponent<T>) =>

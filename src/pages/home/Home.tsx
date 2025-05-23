@@ -6,23 +6,29 @@ import Typical from "react-typical";
 import styles from "./home.module.scss";
 import { IHomeProps } from "./home.props";
 import { ReactComponent as Avatar } from "../../assets/cleaning service-amico.svg";
-import { Button, Shapes, Socials } from "../../components";
+import { BenefitsGrid, Button, Shapes, Socials, Testimonials } from "../../components";
 
 export const Home: FC<IHomeProps> = () => {
   const navigate = useNavigate();
   const steps = ["Deep Cleaning 🧹", 3000, "Move-In/Move-Out 🧽", 3000, "Apartment Cleaning 🏠", 3000];
   return (
-    <motion.section className={styles.home} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className={styles.intro}>
-        <Avatar className={styles.home_img} />
-        <h1 className={styles.home_name}>Cleaning Services</h1>
-        <span className={styles.education}>
+    <>
+
+
+      <motion.section className={styles.home} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <Testimonials/>
+        <div className={styles.intro}>
+          <Avatar className={styles.home_img} />
+          <h1 className={styles.home_name}>Cleaning Services</h1>
+          <span className={styles.education}>
           We offer: <Typical steps={steps} loop={Infinity} wrapper="span" />
         </span>
-        <Socials />
-        <Button buttonType="animate"  onClick={() => navigate("/product")}>Book Online</Button>
-      </div>
-      <Shapes />
-    </motion.section>
-  );
+          <Socials />
+          <Button buttonType="animate" onClick={() => navigate("/product")}>Book Online</Button>
+        </div>
+        <Shapes />
+      </motion.section>
+      <BenefitsGrid/>
+    </>
+)
 };

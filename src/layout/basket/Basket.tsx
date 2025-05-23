@@ -7,6 +7,7 @@ import { IBasketProps } from "./basket.props";
 import {BasketCard, BasketStub, Button, Input, Shapes} from "../../components";
 import { IMainContext, MainContext } from "../../context";
 import {useNavigate} from "react-router-dom";
+import { BookingStepper } from "../../pages";
 
 export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
   const { basket, setInBasket } = useContext<IMainContext>(MainContext);
@@ -32,12 +33,13 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
       overlayProps={{
         color: theme.colors.gray[2],
         opacity: 0.55,
-        blur: 3,
+        blur: 4,
       }}
       padding={15}
       {...props}>
       <Shapes />
-      {!basketItems.length && <BasketStub onClose={onClose} />}
+      {/*{!basketItems.length && <BasketStub onClose={onClose} />}*/}
+      {!basketItems.length && <BookingStepper/>}
       {!!basketItems.length && (
         <div className={styles.basket_wrapper}>
           <ScrollArea h="75vh" className={styles.basket_orders}>
@@ -70,7 +72,7 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
               </div>
             </div>
           </ScrollArea>
-          <Button variant="outline" onClick={() => {
+          <Button buttonType="outline" onClick={() => {
             navigation("/product")
             onClose()
           }}>Вернуться в магазин</Button>

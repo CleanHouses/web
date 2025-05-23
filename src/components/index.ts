@@ -6,3 +6,5 @@ export * from "./Languages/Languages";
 export * from "./BasketStub/BasketStub";
 export * from "./BasketCard/BasketCard";
 export * from "./Notification/Notification";
+export * from "./BenefitsGrid/BenefitsGrid";
+export * from "./Testimonials/Testimonials";

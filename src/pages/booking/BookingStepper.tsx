@@ -1,10 +1,10 @@
 import { Text, Card, Stack, Stepper, Title, Container } from "@mantine/core";
 import React, { useState } from "react";
 import { DateSelectionStep, ConfirmationStep, PersonalInfoStep, EmployeeSelectionStep, ReviewStep } from "./steps";
-import { IconUser, IconCalendarEvent, IconUsers, IconCheck, IconClipboardList } from "@tabler/icons-react";
+import { IconUser, IconCalendarEvent, IconUsers, IconClipboardList } from "@tabler/icons-react";
 import styles from "./BookingStepper.module.scss";
 import { motion } from "framer-motion";
-import { Shapes } from "../../components";
+import { Shapes, Testimonials } from "../../components";
 
 const stepIconSize = 18;
 
@@ -41,17 +41,17 @@ export const BookingStepper = () => {
     {
       label: "Your Info",
       icon: <IconUser size={stepIconSize} />,
-      component: <PersonalInfoStep form={form} setForm={setForm} nextStep={nextStep} />,
+      component: <PersonalInfoStep form={form} setForm={setForm} nextStep={nextStep} prevStep={prevStep} />,
     },
     {
       label: "Choose Date",
       icon: <IconCalendarEvent size={stepIconSize} />,
-      component: <DateSelectionStep form={form} setForm={setForm} nextStep={nextStep} />,
+      component: <DateSelectionStep form={form} setForm={setForm} nextStep={nextStep} prevStep={prevStep}/>,
     },
     {
       label: "Select Staff",
       icon: <IconUsers size={stepIconSize} />,
-      component: <EmployeeSelectionStep form={form} setForm={setForm} nextStep={nextStep} />,
+      component: <EmployeeSelectionStep form={form} setForm={setForm} nextStep={nextStep} prevStep={prevStep} />,
     },
     {
       label: "Review",
@@ -68,13 +68,12 @@ export const BookingStepper = () => {
           <Title order={2} mb="sm">
             Book Your Cleaning Service
           </Title>
-          <Text>
+          <Text ta="center">
             Fill out the form step by step to schedule your professional cleaning service. Choose a date, leave special
             requests, and select your preferred cleaner.
           </Text>
         </Stack>
       </Container>
-
       {active === 4 ? (
         <Card mt="lg" radius="lg" shadow="lg" padding="xl">
           <ConfirmationStep restart={restart} />

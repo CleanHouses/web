@@ -4,7 +4,7 @@ import icon2  from '../assets/dataIcons/gutter cleaning-pana.svg'
 import icon3  from '../assets/dataIcons/cleaning service-rafiki (1).svg'
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "Apartments cleaning.",
+    title: "Apartments / Offices",
     price: 300,
     isSoon: false,
     id: 3,
@@ -17,16 +17,11 @@ export const PRODUCT_MOCK: IProduct[] = [
         "https://baranovichi.by/wp-content/uploads/2023/11/73567547867856.jpg",
       ],
     },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
-    },
     tags: ["house", "cleaning"],
     descriptions:"Это делают в месте, где плечевая кость соединяется с позвоночником. Крыло имеет три части: плечевая, локтевая часть и кисть. Отварные куриные крылышки нежные и сочные на вкус. Можно также их пожарить, сделав хрустящими, острыми и ароматными.",
   },
   {
-    title: "House cleaning.",
+    title: "House",
     price: 300,
     isSoon: false,
     id: 3,
@@ -39,16 +34,11 @@ export const PRODUCT_MOCK: IProduct[] = [
         "https://baranovichi.by/wp-content/uploads/2023/11/73567547867856.jpg",
       ],
     },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
-    },
+
     tags: ["house", "cleaning"],
-    descriptions:"Это делают в месте, где плечевая кость соединяется с позвоночником. Крыло имеет три части: плечевая, локтевая часть и кисть. Отварные куриные крылышки нежные и сочные на вкус. Можно также их пожарить, сделав хрустящими, острыми и ароматными.",
   },
   {
-    title: "Cleaning the roof.",
+    title: "Roof",
     price: 150,
     isSoon: true,
     id: 1,
@@ -68,10 +58,10 @@ export const PRODUCT_MOCK: IProduct[] = [
       email: "razmik.unanyan@mail.ru",
     },
     tags: ["roof", "cleaning", "house"],
-    descriptions:"Это нежное и сочное мясо на двух косточках. Куриная голень без кожи считается диетическим продуктом."
+    descriptions:"Soon"
   },
   {
-    title: "Cleaning clothes.",
+    title: "A/C",
     price: 199,
     isSoon: true,
     id: 2,
@@ -90,6 +80,6 @@ export const PRODUCT_MOCK: IProduct[] = [
       email: "razmik.unanyan@mail.ru",
     },
     tags: ["clothes", "cleaning"],
-    descriptions:"Считается наименее полезной частью курицы. Вкус куриного окорочка зависит от способа приготовления. Отваренный без специй куриный окорок имеет нежный сочный вкус и нейтральный запах."
+    descriptions:"Soon"
   },
 ];
