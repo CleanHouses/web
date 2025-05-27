@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React, { FC } from "react";
 
 import { IProductProps } from "./product.props";
-import { Shapes, ServiceCard } from "../../components";
+import { Shapes, ServiceCard, PageHeader } from "../../components";
 import { PRODUCT_MOCK, SOON } from "../../data";
 
 import styles from "./product.module.scss";
@@ -26,19 +26,9 @@ export const Product: FC<IProductProps> = () => {
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
       <div className={styles.content}>
-        <Shapes />
-        <Container size="sm" py="xl">
-          <Stack align="center">
-            <Title order={2} mb="sm">
-              Book a Cleaning Service with Ease
-            </Title>
-            <Text mb="lg" ta="center">
-              Whether it's a deep clean, regular maintenance, or post-renovation — we’re here to make your space shine.
+        <PageHeader title="Book a Cleaning Service with Ease" text="Whether it's a deep clean, regular maintenance, or post-renovation — we’re here to make your space shine.
               Simply choose the type of service, pick a convenient date, and select a professional. We’ll handle the
-              rest.
-            </Text>
-          </Stack>
-        </Container>
+              rest."/>
         <Grid gutter="lg">
 
           {cards.slice(0, 3).map((card, index) => (

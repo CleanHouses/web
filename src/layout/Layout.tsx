@@ -3,7 +3,7 @@ import React, { FC, FunctionComponent } from "react";
 import styles from "./layout.module.scss";
 import { ILayoutProps } from "./layout.props";
 import { Sidebar } from "./sidebar/Sidebar";
-import { Languages } from "../components";
+import { Languages, Shapes } from "../components";
 import { MainContextProvider } from "../context";
 
 export const Layout: FC<ILayoutProps> = ({ children, ...props }) => (
@@ -11,7 +11,10 @@ export const Layout: FC<ILayoutProps> = ({ children, ...props }) => (
     <Sidebar />
     <main className={styles.main}>
       <Languages />
-      <div className={styles.container}>{children}</div>
+      <div className={styles.container}>
+        {children}
+        <Shapes/>
+      </div>
     </main>
   </div>
 );

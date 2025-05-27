@@ -24,9 +24,7 @@ export const Home: FC<IHomeProps> = () => {
           <Socials />
           <Button buttonType="animate" onClick={() => navigate("/services")}>Book Online</Button>
         </div>
-        <Shapes />
       </motion.section>
-      <BenefitsGrid/>
     </>
 )
 };

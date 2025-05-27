@@ -3,6 +3,7 @@ import { Button, Group, Text, Avatar, MultiSelect, Stack, ScrollArea, Box } from
 import { IconUser, IconUserCog } from "@tabler/icons-react";
 import { useState } from 'react';
 import styles from '../../BookingStepper.module.scss';
+import { StepsFooter } from "../../../../components";
 
 const employees = [
   { value: 'any', label: 'Any Available', avatar: null },
@@ -96,10 +97,7 @@ export const EmployeeSelectionStep = ({ form, setForm, nextStep, prevStep }: any
           </Group>
         </ScrollArea>
       </Box>
-      <Group justify="space-between" mt="md">
-        <Button variant="outline" onClick={prevStep} radius="lg" color="rgb(231, 231, 231)">Back</Button>
-        <Button onClick={handleNext} className={styles.nextButton} radius="lg" style={{ backgroundColor: '#6c6ce5' }}>Next</Button>
-      </Group>
+      <StepsFooter onNext={handleNext} onBack={prevStep}/>
     </div>
   );
 }

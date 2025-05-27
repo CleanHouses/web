@@ -4,7 +4,7 @@ import { DateSelectionStep, ConfirmationStep, PersonalInfoStep, EmployeeSelectio
 import { IconUser, IconCalendarEvent, IconUsers, IconClipboardList } from "@tabler/icons-react";
 import styles from "./BookingStepper.module.scss";
 import { motion } from "framer-motion";
-import { BenefitsGrid, Shapes, Testimonials } from "../../components";
+import { BenefitsGrid } from "../../components";
 import { useMediaQuery } from "@mantine/hooks";
 
 const stepIconSize = 18;
@@ -63,7 +63,6 @@ export const BookingStepper = () => {
   const isMobile = useMediaQuery("(max-width: 710px)");
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
-      <Shapes />
       <Container size="sm">
         <Stack align="center">
           <Title order={2} mb="sm">
@@ -76,10 +75,11 @@ export const BookingStepper = () => {
         </Stack>
       </Container>
       {active === 4 ? (
-
+        <Center>
           <Card mt="lg" radius="lg" shadow="lg" padding="xl" w={400}>
             <ConfirmationStep restart={restart} />
           </Card>
+        </Center>
       ) : (
         <Group gap="xl" justify="center" className={styles.groupResponsive}>
           <Stack>
@@ -90,6 +90,7 @@ export const BookingStepper = () => {
               size="xs"
               mb="lg"
               mt="lg"
+              color="#6c6ce5"
               allowNextStepsSelect={false}
               orientation="horizontal">
               {steps.map((step, index) => (

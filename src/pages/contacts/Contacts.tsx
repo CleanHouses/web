@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 import styles from "./contacts.module.scss";
 import { IContactsProps } from "./contacts.props";
-import { Button, Input, PageTitle, Shapes, Textarea } from "../../components";
+import { Button, Input, Shapes, Textarea } from "../../components";
 
 export const Contacts: FC<IContactsProps> = () => {
   return (

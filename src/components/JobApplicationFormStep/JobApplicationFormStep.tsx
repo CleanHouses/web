@@ -37,7 +37,6 @@ export const JobApplicationFormStep = ({ form, setForm }: any) => {
   };
 
   return (
-    <Center mt="xl">
       <Card
         radius="lg"
         shadow="lg"
@@ -48,11 +47,6 @@ export const JobApplicationFormStep = ({ form, setForm }: any) => {
         style={{ overflow: 'visible' }}
       >
         <Stack gap="md">
-          <Title order={2}>Apply for this position</Title>
-          <Text c="dimmed" size="sm">
-            Fill out the form below to submit your job application. We look forward to hearing from you!
-          </Text>
-
           <TextInput
             label={<LabelWithIcon icon={<IconUser size={14} />} text="First Name" required />}
             value={form.firstName}
@@ -126,16 +120,12 @@ export const JobApplicationFormStep = ({ form, setForm }: any) => {
           </Stack>
 
           <Group justify="flex-end" mt="md">
-            <Button
-              radius="lg"
-              style={{ backgroundColor: '#6c6ce5' }}
-            >
+            <Button radius="lg" style={{ backgroundColor: '#6c6ce5' }}>
               Submit Application
             </Button>
           </Group>
         </Stack>
       </Card>
-    </Center>
   );
 };
 

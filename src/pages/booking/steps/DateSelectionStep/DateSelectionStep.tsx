@@ -3,6 +3,7 @@ import { IconCalendarEvent } from '@tabler/icons-react';
 import { useState } from 'react';
 import { DatePicker } from '@mantine/dates';
 import styles from '../../BookingStepper.module.scss';
+import { StepsFooter } from "../../../../components";
 
 export const DateSelectionStep = ({ form, setForm, nextStep, prevStep }: any) => {
   const [error, setError] = useState(false);
@@ -42,21 +43,7 @@ export const DateSelectionStep = ({ form, setForm, nextStep, prevStep }: any) =>
           Please select at least one date.
         </Text>
       )}
-
-      <Group justify="space-between" mt="md">
-        <Button variant="light" onClick={prevStep} radius="lg">
-          Back
-        </Button>
-        <Button
-          onClick={handleNext}
-          className={styles.nextButton}
-          radius="lg"
-          style={{ backgroundColor: '#6c6ce5' }}
-          disabled={!form.dates || form.dates.length === 0}
-        >
-          Next
-        </Button>
-      </Group>
+      <StepsFooter onNext={handleNext} onBack={prevStep}/>
     </div>
   );
 };

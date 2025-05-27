@@ -1,6 +1,6 @@
-import { Button, Group, Text, Card, Stack, Badge, Divider, Title } from "@mantine/core";
+import { Group, Text, Stack, Badge, Divider } from "@mantine/core";
 import {
-  IconCalendarEvent, IconClipboardList,
+  IconCalendarEvent,
   IconMail,
   IconMapPin,
   IconMessage,
@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import styles from "../../BookingStepper.module.scss"
 import React from "react";
+import { StepsFooter } from "../../../../components";
 
 export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
 
@@ -28,9 +29,6 @@ export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
 
   return (
     <div className={styles.formStep}>
-      <Title fw={600}>
-        Review your booking details
-      </Title>
       <Stack gap="sm" mb="md">
         <Group gap={6}><IconUser size={16} /><Text>{form.firstName} {form.lastName}</Text></Group>
         <Group gap={6}><IconMail size={16} /><Text>{form.email}</Text></Group>
@@ -71,15 +69,7 @@ export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
       <Text mb="md" color="dimmed">
         Please verify all details are correct before submitting your booking.
       </Text>
-
-      <Group justify="space-between">
-        <Button variant="light" radius="lg" onClick={prevStep}>
-          Back
-        </Button>
-        <Button radius="lg" onClick={handleSubmit} color="blue">
-          Confirm & Submit
-        </Button>
-      </Group>
+      <StepsFooter onNext={handleSubmit} onBack={prevStep} nextTitle="Confirm & Submit"/>
     </div>
   );
 };

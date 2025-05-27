@@ -3,6 +3,7 @@ import { IconUser, IconAt, IconPhone, IconHome } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "../../BookingStepper.module.scss";
+import { StepsFooter } from "../../../../components";
 
 export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
   const [errors, setErrors] = useState({
@@ -91,12 +92,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
           />
         </Tooltip>
       </Stack>
-
-      <Group justify="flex-end" mt="md">
-        <Button onClick={handleNext} className={styles.nextButton} radius="lg" style={{ backgroundColor: "#6c6ce5" }}>
-          Next
-        </Button>
-      </Group>
+      <StepsFooter onNext={handleNext}/>
     </Stack>
   );
 };

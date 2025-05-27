@@ -1,5 +1,5 @@
 export * from "./_ui";
-export * from "./PageTitle/PageTitle";
+export * from "./PageHeader/PageHeader";
 export * from "./Shapes/Shapes";
 export * from "./Socials/Socials";
 export * from "./Languages/Languages";
@@ -10,3 +10,4 @@ export * from "./BenefitsGrid/BenefitsGrid";
 export * from "./Testimonials/Testimonials";
 export * from "./ServiceCard/ServaceCard";
 export * from "./JobApplicationFormStep/JobApplicationFormStep";
+export * from "./StepsFooter/StepsFooter";

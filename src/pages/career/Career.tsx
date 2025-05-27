@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { JobApplicationFormStep } from "../../components";
-import { Card, Center } from "@mantine/core";
+import { JobApplicationFormStep, PageHeader } from "../../components";
+import { Center, Stack } from "@mantine/core";
 
 export const Career = () => {
   const [form, setForm] = useState({
@@ -14,6 +14,12 @@ export const Career = () => {
     employees: ["any"],
   });
   return (
-        <JobApplicationFormStep form={form} setForm={setForm} />
+    <Center>
+      <Stack gap={2} align="center">
+        <PageHeader title="Apply for a Position" text="We’re excited that you’re interested in joining our team! Please complete the form below so we can learn more about you and your experience."/>
+      <JobApplicationFormStep form={form} setForm={setForm} />
+      </Stack>
+    </Center>
+
   );
 };
