@@ -1,9 +1,9 @@
-import { Container, Stack, Title, Text, Grid } from "@mantine/core";
+import { Grid } from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC } from "react";
 
 import { IProductProps } from "./product.props";
-import { Shapes, ServiceCard, PageHeader } from "../../components";
+import { ServiceCard, PageHeader } from "../../components";
 import { PRODUCT_MOCK, SOON } from "../../data";
 
 import styles from "./product.module.scss";
@@ -16,7 +16,7 @@ export const Product: FC<IProductProps> = () => {
       key={product.id}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: i * 0.3, duration: 0.2 }}
+      transition={{ delay: i * 0.5, duration: 0.4 }}
     >
     <ServiceCard id={product.id} title={product.title} description={product.descriptions} isSoon={product.isSoon} pictureLink={product.images?.main}/>
     </motion.div>
@@ -24,7 +24,7 @@ export const Product: FC<IProductProps> = () => {
   const isMobile = useMediaQuery("(max-width: 710px)");
 
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.content}>
         <PageHeader title="Book a Cleaning Service with Ease" text="Whether it's a deep clean, regular maintenance, or post-renovation — we’re here to make your space shine.
               Simply choose the type of service, pick a convenient date, and select a professional. We’ll handle the
@@ -45,6 +45,6 @@ export const Product: FC<IProductProps> = () => {
 
         </Grid>
       </div>
-    </motion.section>
+    </section>
   );
 };
