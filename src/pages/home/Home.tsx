@@ -13,8 +13,6 @@ export const Home: FC<IHomeProps> = () => {
   const steps = ["Deep Cleaning 🧹", 3000, "Move-In/Move-Out 🧽", 3000, "Apartment Cleaning 🏠", 3000];
   return (
     <>
-
-
       <motion.section className={styles.home} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <Testimonials/>
         <div className={styles.intro}>
@@ -24,7 +22,7 @@ export const Home: FC<IHomeProps> = () => {
           We offer: <Typical steps={steps} loop={Infinity} wrapper="span" />
         </span>
           <Socials />
-          <Button buttonType="animate" onClick={() => navigate("/product")}>Book Online</Button>
+          <Button buttonType="animate" onClick={() => navigate("/services")}>Book Online</Button>
         </div>
         <Shapes />
       </motion.section>

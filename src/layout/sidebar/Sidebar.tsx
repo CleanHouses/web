@@ -5,7 +5,7 @@ import React, { FC, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { ISidebarProps } from "./sidebar.props";
 import { NavItem } from "../../components";
-import { IconMail, IconHome, IconBriefcase, IconX, IconMenu2 } from "@tabler/icons-react";
+import { IconMail, IconHome, IconBriefcase, IconX, IconMenu2, IconTool } from "@tabler/icons-react";
 import loofah from "./sweet.png"
 
 export const Sidebar: FC<ISidebarProps> = () => {
@@ -27,6 +27,12 @@ export const Sidebar: FC<ISidebarProps> = () => {
         })}>
           <ul className={styles.nav_list}>
             <NavItem to="/unanyan.am" label="Home" icon={<IconHome size={15} />} onClick={handleClose} />
+            <NavItem
+              to="/services"
+              label="Services"
+              icon={<IconTool size={15} />}
+              onClick={handleClose}
+            />
             <NavItem to="/career" label="Career" icon={<IconBriefcase size={15} />} onClick={handleClose} />
             <NavItem to="/contact" label="Contacts" icon={<IconMail size={15} />} onClick={handleClose} />
           </ul>

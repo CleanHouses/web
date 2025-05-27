@@ -1,6 +1,11 @@
 .container {
   min-height: 100vh;
-  margin: 0 auto;
+  margin-top: 1rem;
+  background: radial-gradient(
+                  circle at top left,
+                  rgba(204, 202, 202, 0.15),
+                  transparent 40%
+  );
 }
 
 .section {

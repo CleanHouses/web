@@ -1,10 +1,11 @@
-import { Text, Card, Stack, Stepper, Title, Container } from "@mantine/core";
+import { Text, Card, Stack, Stepper, Title, Container, Group } from "@mantine/core";
 import React, { useState } from "react";
 import { DateSelectionStep, ConfirmationStep, PersonalInfoStep, EmployeeSelectionStep, ReviewStep } from "./steps";
 import { IconUser, IconCalendarEvent, IconUsers, IconClipboardList } from "@tabler/icons-react";
 import styles from "./BookingStepper.module.scss";
 import { motion } from "framer-motion";
-import { Shapes, Testimonials } from "../../components";
+import { BenefitsGrid, Shapes, Testimonials } from "../../components";
+import { useMediaQuery } from "@mantine/hooks";
 
 const stepIconSize = 18;
 
@@ -46,7 +47,7 @@ export const BookingStepper = () => {
     {
       label: "Choose Date",
       icon: <IconCalendarEvent size={stepIconSize} />,
-      component: <DateSelectionStep form={form} setForm={setForm} nextStep={nextStep} prevStep={prevStep}/>,
+      component: <DateSelectionStep form={form} setForm={setForm} nextStep={nextStep} prevStep={prevStep} />,
     },
     {
       label: "Select Staff",
@@ -59,7 +60,7 @@ export const BookingStepper = () => {
       component: <ReviewStep form={form} prevStep={prevStep} nextStep={nextStep} />,
     },
   ];
-
+  const isMobile = useMediaQuery("(max-width: 710px)");
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
       <Shapes />
@@ -79,23 +80,27 @@ export const BookingStepper = () => {
           <ConfirmationStep restart={restart} />
         </Card>
       ) : (
-        <>
-          <Stepper
-            active={active}
-            onStepClick={setActive}
-            size="xs"
-            mb="lg"
-            mt="lg"
-            allowNextStepsSelect={false}
-            orientation="horizontal">
-            {steps.map((step, index) => (
-              <Stepper.Step key={index} icon={step.icon} />
-            ))}
-          </Stepper>
-          <Card radius="lg" shadow="lg" padding="xl">
-            <div className={styles.stepContent}>{steps[active].component}</div>
-          </Card>
-        </>
+        <Group gap="xl" justify="center" className={styles.groupResponsive}>
+          <Stack>
+            <Stepper
+              w={500}
+              active={active}
+              onStepClick={setActive}
+              size="xs"
+              mb="lg"
+              mt="lg"
+              allowNextStepsSelect={false}
+              orientation="horizontal">
+              {steps.map((step, index) => (
+                <Stepper.Step key={index} icon={step.icon} />
+              ))}
+            </Stepper>
+            <Card radius="lg" shadow="lg" padding="lg">
+              <div className={styles.stepContent}>{steps[active].component}</div>
+            </Card>
+          </Stack>
+          <BenefitsGrid />
+        </Group>
       )}
     </motion.section>
   );

@@ -1,8 +1,9 @@
-import { SimpleGrid, Container, Title } from "@mantine/core";
+import { SimpleGrid, Container, Title, Stack } from "@mantine/core";
 import { BenefitCard } from "./BenefitCard";
 import { IconSparkles, IconClockHour4, IconShieldCheck, IconLeaf } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "@mantine/hooks";
 
 export const BenefitsGrid = () => {
 
@@ -33,39 +34,27 @@ export const BenefitsGrid = () => {
       description: "We use safe, green cleaning supplies for a healthy environment.",
     },
   ];
-
+  const isMobile = useMediaQuery("(max-width: 710px)");
   return (
-    <Container
-      py="xl"
-      h="100vh"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-      }}>
-      <Title order={1} mb="xl">
+    <Stack w={300}>
+      <Title order={6}>
         Why Choose Our Cleaning Service?
       </Title>
-
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 4 }} spacing="xl">
-        {benefits.map((benefit, index) => (
-          <motion.div
-            key={benefit.title}
-            ref={ref}
-            initial={{ y: 50 }}
-            animate={inView ? { y: 10 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <BenefitCard
-              icon={benefit.icon}
-              title={benefit.title}
-              description={benefit.description}
-            />
-          </motion.div>
-        ))}
-      </SimpleGrid>
-    </Container>
+      {benefits.map((benefit, index) => (
+        <motion.div
+          key={benefit.title}
+          ref={ref}
+          initial={{ y: 50 }}
+          animate={inView ? { y: 10 } : {}}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <BenefitCard
+            icon={benefit.icon}
+            title={benefit.title}
+            description={benefit.description}
+          />
+        </motion.div>
+      ))}
+    </Stack>
   );
 };

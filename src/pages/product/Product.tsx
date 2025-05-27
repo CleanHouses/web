@@ -1,17 +1,27 @@
-import { Card, Container, Image, SimpleGrid, Stack, Title, Text } from "@mantine/core";
+import { Container, Stack, Title, Text, Grid } from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC } from "react";
 
 import { IProductProps } from "./product.props";
-import { Shapes, Button} from "../../components";
-import { PRODUCT_MOCK } from "../../data";
+import { Shapes, ServiceCard } from "../../components";
+import { PRODUCT_MOCK, SOON } from "../../data";
 
 import styles from "./product.module.scss";
-import { IconCalendarEvent } from "@tabler/icons-react";
-import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "@mantine/hooks";
 
 export const Product: FC<IProductProps> = () => {
-  const navigate = useNavigate();
+
+  const cards = [...PRODUCT_MOCK, ...SOON].map((product, i) => (
+    <motion.div
+      key={product.id}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: i * 0.3, duration: 0.2 }}
+    >
+    <ServiceCard id={product.id} title={product.title} description={product.descriptions} isSoon={product.isSoon} pictureLink={product.images?.main}/>
+    </motion.div>
+  ))
+  const isMobile = useMediaQuery("(max-width: 710px)");
 
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
@@ -29,34 +39,21 @@ export const Product: FC<IProductProps> = () => {
             </Text>
           </Stack>
         </Container>
-        <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 4 }} spacing="xl">
-          {PRODUCT_MOCK.map((product) => (
-            <Card
-              className={styles.product_card} key={product.id}
-              shadow="lg"
-              padding="lg"
-              radius="xl"
-              >
-              <div className={styles.product_thumbnail}>
-                <Image src={product?.images?.main} alt="" className={styles.product_img} h={300}/>
-                <div className={styles.product_mask}></div>
-                {product.isSoon && <div className={styles.product_soon}></div>}
-              </div>
-              <span className={styles.product_category}>{product.title}</span>
-              <h3 className={styles.product_title}>{product.descriptions}</h3>
-              <Button
-                buttonType={product.isSoon ? "outline" : "primary"}
-                pos="absolute"
-                bottom="1rem"
-                right="1rem"
-                onClick={() => (product.isSoon ? "" : navigate(`/booking/${product.id}`))}
-                leftSection={<IconCalendarEvent size={18} />}
-                radius="lg">
-                {product.isSoon ? "Soon" : " Book now"}
-              </Button>
-            </Card>
+        <Grid gutter="lg">
+
+          {cards.slice(0, 3).map((card, index) => (
+            <Grid.Col key={index} span={isMobile ? 12 : 4}>
+              {card}
+            </Grid.Col>
           ))}
-        </SimpleGrid>
+
+          {cards.slice(3, 5).map((card, index) => (
+            <Grid.Col key={index + 3} span={isMobile ? 12 : 6}>
+              {card}
+            </Grid.Col>
+          ))}
+
+        </Grid>
       </div>
     </motion.section>
   );

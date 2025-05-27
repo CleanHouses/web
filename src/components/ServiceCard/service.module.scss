@@ -1,0 +1,74 @@
+@use "../../styles/abstracts" as *;
+
+.container {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+  }
+}
+
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: $cl-text;
+}
+
+.imgWrapper {
+  height: 250px;
+  position: relative;
+
+  @media (max-width: $mobile) {
+    height: 250px;
+  }
+}
+
+.img {
+  height: 250px;
+  @media (max-width: $mobile) {
+    height: 250px;
+  }
+}
+
+.badges {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+}
+
+.like {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  color: $cl-text;
+}
+
+.price {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+
+  border-radius: 0 1rem 1rem 0;
+  z-index: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: left;
+  margin-top: 0.5rem;
+  color: $cl-text;
+}
+

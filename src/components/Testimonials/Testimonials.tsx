@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: 'John Smith',
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    rating: 4,
+    rating: 5,
     text: 'Very satisfied with the service. The cleaner was punctual and polite.',
   },
   {
@@ -47,7 +47,7 @@ export const  Testimonials = () => {
                 <Avatar src={t.avatar} alt={t.name} radius="xl" />
                 <div>
                   <Text size="sm" fw={600}>{t.name}</Text>
-                  <Rating value={t.rating} readOnly size="xs" />
+                  <Rating value={t.rating} readOnly size="xs"  color="hsl(43, 100%, 68%)"/>
                 </div>
               </Group>
               <Text size="sm" c="dimmed">

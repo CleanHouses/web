@@ -1,4 +1,4 @@
-import { TextInput, Textarea, Button, Group, Text } from '@mantine/core';
+import { TextInput, Textarea, Button, Group, Text, Stack, Card } from "@mantine/core";
 import { IconUser, IconAt, IconPhone, IconHome } from '@tabler/icons-react';
 import { useState } from 'react';
 import styles from '../../BookingStepper.module.scss';
@@ -29,7 +29,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
   };
 
   return (
-    <div className={styles.formStep}>
+    <Stack gap="md">
       <TextInput
         label={<LabelWithIcon icon={<IconUser size={14} />} text="First Name" required />}
         value={form.firstName}
@@ -88,7 +88,10 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
           Next
         </Button>
       </Group>
-    </div>
+      <Card c="#6c6ce5">
+        Could you please provide a bit more detail about the space that needs to be cleaned?
+      </Card>
+    </Stack>
   );
 }
 

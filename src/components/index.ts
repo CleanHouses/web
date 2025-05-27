@@ -8,3 +8,4 @@ export * from "./BasketCard/BasketCard";
 export * from "./Notification/Notification";
 export * from "./BenefitsGrid/BenefitsGrid";
 export * from "./Testimonials/Testimonials";
+export * from "./ServiceCard/ServaceCard";

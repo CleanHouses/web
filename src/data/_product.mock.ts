@@ -1,85 +1,66 @@
 import { IProduct } from "../interface";
-import icon1  from '../assets/dataIcons/Laundry and dry cleaning-pana.svg'
-import icon2  from '../assets/dataIcons/gutter cleaning-pana.svg'
-import icon3  from '../assets/dataIcons/cleaning service-rafiki (1).svg'
+
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "Apartments / Offices",
+    title: "Apartments",
     price: 300,
     isSoon: false,
-    id: 3,
+    id: 1,
     category: "Apartments cleaning",
     images: {
-      main: icon3,
-      all: [
-        "https://cleanhouse.com.ru/wp-content/uploads/2019/06/Himchistka-divana-himchistka-kovra-ot-spetsialistov-Clean-House_-e1560590337884.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fj1Yt-YBlUmzV3CDIRdY1rJMNlu8dsg4TQ&s",
-        "https://baranovichi.by/wp-content/uploads/2023/11/73567547867856.jpg",
-      ],
+      main: "https://www.mollymaid.com/us/en-us/_assets/images/service-header-images/mly-home-cleaning-header-desktop.webp",
     },
     tags: ["house", "cleaning"],
-    descriptions:"Это делают в месте, где плечевая кость соединяется с позвоночником. Крыло имеет три части: плечевая, локтевая часть и кисть. Отварные куриные крылышки нежные и сочные на вкус. Можно также их пожарить, сделав хрустящими, острыми и ароматными.",
   },
   {
     title: "House",
     price: 300,
     isSoon: false,
-    id: 3,
+    id: 2,
     category: "House cleaning",
     images: {
-      main: icon3,
-      all: [
-        "https://cleanhouse.com.ru/wp-content/uploads/2019/06/Himchistka-divana-himchistka-kovra-ot-spetsialistov-Clean-House_-e1560590337884.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fj1Yt-YBlUmzV3CDIRdY1rJMNlu8dsg4TQ&s",
-        "https://baranovichi.by/wp-content/uploads/2023/11/73567547867856.jpg",
-      ],
+      main:  "https://transform.octanecdn.com/fit/1600x900/https://octanecdn.com/maidprocom/maidprocom_517957228.jpg",
     },
 
     tags: ["house", "cleaning"],
   },
   {
+    title: "Office",
+    price: 300,
+    isSoon: false,
+    id: 3,
+    category: "Office cleaning",
+    images: {
+      main:  "https://aztecjanitorial.com/wp-content/uploads/2022/05/Commercial-Cleaning-houston.jpg",
+    },
+
+    tags: ["house", "cleaning"],
+  },
+];
+
+export const SOON = [
+  {
     title: "Roof",
     price: 150,
     isSoon: true,
-    id: 1,
+    id: 4,
     category: "Cleaning the roof",
     images: {
-      main: icon2,
-      all: [
-        "https://dlczb9lfz9r73.cloudfront.net/wp-content/uploads/2023/01/29194226/AdobeStock_394603682-scaled.jpeg",
-        "https://airtasker-seo-assets-prod.s3.amazonaws.com/en_AU/1628496616932_roof-cleaning.jpg",
-        "https://static.homeguide.com/assets/images/content/homeguide-soft-wash-roof-cleaning-asphalt-shingles_qfgtul.jpg",
-        "https://evanshomeimprovementoh.com/wp-content/uploads/2018/11/roof-cleaning-1080x675.jpeg",
-      ],
-    },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
+      main: "https://airtasker-seo-assets-prod.s3.amazonaws.com/en_AU/1628496616932_roof-cleaning.jpg",
     },
     tags: ["roof", "cleaning", "house"],
-    descriptions:"Soon"
+    descriptions: "Soon",
   },
   {
     title: "A/C",
     price: 199,
     isSoon: true,
-    id: 2,
+    id: 5,
     category: "Cleaning clothes ",
     images: {
-      main: icon1,
-      all: [
-        "https://avatars.dzeninfra.ru/get-zen_doc/10074064/pub_649062e0d7291f01e9fbff33_64906316d7291f01e9fc74cf/scale_1200",
-        "https://ah.com.ua/wp-content/uploads/2020/02/chto-takoe-ximchistka2-1024x609.jpg",
-        "https://chistykof.ru/wp-content/uploads/2019/10/himchistka.jpg",
-      ],
-    },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
+      main: "https://s3-media0.fl.yelpcdn.com/bphoto/PIxftmwX47XwC0-3npe6Hw/1000s.jpg",
     },
     tags: ["clothes", "cleaning"],
-    descriptions:"Soon"
+    descriptions: "Soon",
   },
 ];

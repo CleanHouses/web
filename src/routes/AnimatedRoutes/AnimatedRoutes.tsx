@@ -11,7 +11,7 @@ export const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/unanyan.am" element={<Home />} />
         <Route path="/contact" element={<Contacts />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/services" element={<Product />} />
         <Route path="/booking/:pruductId" element={<BookingStepper />} />
       </Routes>
     </AnimatePresence>
