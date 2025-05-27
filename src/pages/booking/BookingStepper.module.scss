@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   margin: 2rem auto;
   @media (max-width: 768px) {
@@ -10,6 +10,23 @@
 
 .stepContent {
   margin-top: 2rem;
+}
+
+.moreDetail {
+  position: absolute;
+  background-color: #6c6ce5;
+  color: white;
+  padding: 1rem;
+  width: 300px;
+  border-radius: 1rem 1rem 0;
+  left: -310px;
+  top: -100px;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    border-radius: 1rem;
+    position: static;
+  }
 }
 
 .formStep {

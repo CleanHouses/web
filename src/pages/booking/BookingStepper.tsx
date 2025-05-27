@@ -1,4 +1,4 @@
-import { Text, Card, Stack, Stepper, Title, Container, Group } from "@mantine/core";
+import { Text, Card, Stack, Stepper, Title, Container, Group, Center } from "@mantine/core";
 import React, { useState } from "react";
 import { DateSelectionStep, ConfirmationStep, PersonalInfoStep, EmployeeSelectionStep, ReviewStep } from "./steps";
 import { IconUser, IconCalendarEvent, IconUsers, IconClipboardList } from "@tabler/icons-react";
@@ -76,9 +76,10 @@ export const BookingStepper = () => {
         </Stack>
       </Container>
       {active === 4 ? (
-        <Card mt="lg" radius="lg" shadow="lg" padding="xl">
-          <ConfirmationStep restart={restart} />
-        </Card>
+
+          <Card mt="lg" radius="lg" shadow="lg" padding="xl" w={400}>
+            <ConfirmationStep restart={restart} />
+          </Card>
       ) : (
         <Group gap="xl" justify="center" className={styles.groupResponsive}>
           <Stack>
@@ -95,7 +96,7 @@ export const BookingStepper = () => {
                 <Stepper.Step key={index} icon={step.icon} />
               ))}
             </Stepper>
-            <Card radius="lg" shadow="lg" padding="lg">
+            <Card radius="lg" shadow="lg" padding="lg" style={{overflow: "visible"}}>
               <div className={styles.stepContent}>{steps[active].component}</div>
             </Card>
           </Stack>

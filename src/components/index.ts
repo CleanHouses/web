@@ -9,3 +9,4 @@ export * from "./Notification/Notification";
 export * from "./BenefitsGrid/BenefitsGrid";
 export * from "./Testimonials/Testimonials";
 export * from "./ServiceCard/ServaceCard";
+export * from "./JobApplicationFormStep/JobApplicationFormStep";
