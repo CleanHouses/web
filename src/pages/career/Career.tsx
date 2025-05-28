@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { JobApplicationFormStep, PageHeader } from "../../components";
 import { Center, Stack } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 export const Career = () => {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -13,11 +15,12 @@ export const Career = () => {
     dates: [],
     employees: ["any"],
   });
+
   return (
-    <Center>
+    <Center pt="4rem">
       <Stack gap={2} align="center">
-        <PageHeader title="Apply for a Position" text="We’re excited that you’re interested in joining our team! Please complete the form below so we can learn more about you and your experience."/>
-      <JobApplicationFormStep form={form} setForm={setForm} />
+        <PageHeader title={t("career.title")} text={t("career.text")} />
+        <JobApplicationFormStep form={form} setForm={setForm} />
       </Stack>
     </Center>
 

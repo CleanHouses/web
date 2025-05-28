@@ -6,11 +6,12 @@ import styles from "./languages.module.scss";
 import { ILanguagesProps } from "./languages.props";
 import Eng from "../../assets/flugs/usa.png";
 import Spain from "../../assets/flugs/spain.png";
+import { useTranslation } from "react-i18next";
 
 export const Languages: FC<ILanguagesProps> = ({ ...props }) => {
   const [openSelectLg, setOpenSelectLg] = useState(false);
   const [currLg, setCurrLg] = useState<"ru" | "sp" | "en">("en");
-
+  const { i18n } = useTranslation();
   const lgs: { [key: string]: ReactNode } = {
     sp: <Image src={Spain} />,
     en: <Image src={Eng} />,
@@ -18,6 +19,7 @@ export const Languages: FC<ILanguagesProps> = ({ ...props }) => {
 
   const handleSelectedLg = (lg: "ru" | "sp" | "en") => {
     setCurrLg(lg);
+    i18n.changeLanguage(lg)
     setOpenSelectLg((prev) => !prev);
   };
   return (

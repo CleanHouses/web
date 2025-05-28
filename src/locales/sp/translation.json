@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Servicios de Limpieza",
+    "offer": {
+      "weOffer": "Ofrecemos",
+      "deepCleaning": "Limpieza profunda 🧹",
+      "moveIn": "Limpieza de mudanza 🧽",
+      "apartment": "Limpieza de apartamentos 🏠"
+    },
+    "bookOnline": "Reservar en línea"
+  },
+  "product": {
+    "title": "Reserva un Servicio de Limpieza Fácilmente",
+    "text": "Ya sea una limpieza profunda, mantenimiento regular o limpieza post-renovación — estamos aquí para hacer que tu espacio brille. Simplemente elige el tipo de servicio, selecciona una fecha conveniente y elige un profesional. Nosotros nos encargamos del resto."
+  },
+  "career": {
+    "title": "Postúlate para un Puesto",
+    "text": "¡Nos alegra que estés interesado en unirte a nuestro equipo! Por favor, completa el siguiente formulario para que podamos conocerte mejor y saber más sobre tu experiencia."
+  },
+  "contacts": {
+    "title": "¿Tienes preguntas?",
+    "text": "Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos usando el formulario a continuación."
+  },
+  "booking": {
+    "title": "Reserva Tu Servicio de Limpieza",
+    "text": "Completa el formulario paso a paso para programar tu servicio de limpieza profesional. Elige una fecha, deja instrucciones especiales y selecciona a tu limpiador preferido."
+  }
+}

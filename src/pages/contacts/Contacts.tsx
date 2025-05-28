@@ -2,8 +2,11 @@ import { TextInput, Textarea, Stack, Card, Center } from "@mantine/core";
 import { IconAt, IconMessage, IconUser } from "@tabler/icons-react";
 import { useState, useEffect } from 'react';
 import { Button, PageHeader } from "../../components";
+import { useTranslation } from "react-i18next";
 
 export const Contacts = () => {
+  const { t } = useTranslation();
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -30,9 +33,9 @@ export const Contacts = () => {
   };
 
   return (
-    <Center py="xl" px="md">
+    <Center h="100vh">
         <Stack gap="md">
-          <PageHeader title="Got any questions?" text="If you have any questions or need further information, feel free to reach out using the form below."/>
+          <PageHeader title={t("contacts.title")} text={t("contacts.text")}/>
           <Card w="100%" radius="lg" shadow="lg" withBorder>
           <TextInput
             label="Your Name"

@@ -9,7 +9,7 @@ export const BenefitsGrid = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: true,     // анимация один раз
-    threshold: 0.5,        // сработает, когда 20% элемента в зоне видимости
+    threshold: 0.2,        // сработает, когда 20% элемента в зоне видимости
   });
 
   const benefits = [
@@ -34,10 +34,10 @@ export const BenefitsGrid = () => {
       description: "We use safe, green cleaning supplies for a healthy environment.",
     },
   ];
-  const isMobile = useMediaQuery("(max-width: 710px)");
+
   return (
-    <Stack w={300}>
-      <Title order={6}>
+    <Stack>
+      <Title order={5} mt="lg" ta="center">
         Why Choose Our Cleaning Service?
       </Title>
       {benefits.map((benefit, index) => (

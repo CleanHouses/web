@@ -1,16 +1,23 @@
-import { Text, Card, Stack, Stepper, Title, Container, Group, Center } from "@mantine/core";
+import { Card, Stack, Stepper, Group, Center } from "@mantine/core";
 import React, { useState } from "react";
-import { DateSelectionStep, ConfirmationStep, PersonalInfoStep, EmployeeSelectionStep, ReviewStep } from "./steps";
+import {
+  DateSelectionStep,
+  PersonalInfoStep,
+  EmployeeSelectionStep,
+  ReviewStep,
+  Success
+} from "./steps";
 import { IconUser, IconCalendarEvent, IconUsers, IconClipboardList } from "@tabler/icons-react";
 import styles from "./BookingStepper.module.scss";
 import { motion } from "framer-motion";
-import { BenefitsGrid } from "../../components";
-import { useMediaQuery } from "@mantine/hooks";
+import { BenefitsGrid, PageHeader } from "../../components";
+import { useTranslation } from "react-i18next";
 
 const stepIconSize = 18;
 
 export const BookingStepper = () => {
   const [active, setActive] = useState(0);
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -60,31 +67,21 @@ export const BookingStepper = () => {
       component: <ReviewStep form={form} prevStep={prevStep} nextStep={nextStep} />,
     },
   ];
-  const isMobile = useMediaQuery("(max-width: 710px)");
+
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
-      <Container size="sm">
-        <Stack align="center">
-          <Title order={2} mb="sm">
-            Book Your Cleaning Service
-          </Title>
-          <Text ta="center">
-            Fill out the form step by step to schedule your professional cleaning service. Choose a date, leave special
-            requests, and select your preferred cleaner.
-          </Text>
-        </Stack>
-      </Container>
+      <PageHeader  title={t("booking.title")}  text={t("contacts.text")}/>
       {active === 4 ? (
         <Center>
-          <Card mt="lg" radius="lg" shadow="lg" padding="xl" w={400}>
-            <ConfirmationStep restart={restart} />
+          <Card mt="lg" radius="lg" shadow="lg" padding="md" w={400}>
+            <Success restart={restart} />
           </Card>
         </Center>
       ) : (
-        <Group gap="xl" justify="center" className={styles.groupResponsive}>
-          <Stack>
+        <Group gap="lg" justify="center" className={styles.groupResponsive}>
+          <Stack w="45%" style={{minWidth: 350}}>
             <Stepper
-              w={500}
+              w="100%"
               active={active}
               onStepClick={setActive}
               size="xs"
@@ -97,7 +94,7 @@ export const BookingStepper = () => {
                 <Stepper.Step key={index} icon={step.icon} />
               ))}
             </Stepper>
-            <Card radius="lg" shadow="lg" padding="lg" style={{overflow: "visible"}}>
+            <Card radius="lg" shadow="lg" padding="lg">
               <div className={styles.stepContent}>{steps[active].component}</div>
             </Card>
           </Stack>

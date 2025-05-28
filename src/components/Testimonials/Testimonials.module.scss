@@ -1,0 +1,25 @@
+@use "../../styles/abstracts" as *;
+
+.testimonials {
+  position: absolute;
+  right: 5rem;
+}
+
+@media screen and (max-width: $ipad) {
+
+  .testimonials {
+    position: static;
+    right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Cleaning Services",
+    "offer": {
+      "weOffer": "We offer",
+      "deepCleaning": "Deep Cleaning 🧹",
+      "moveIn": "Move-In/Move-Out 🧽",
+      "apartment": "Apartment Cleaning 🏠"
+    },
+    "bookOnline": "Book Online"
+  },
+  "product": {
+    "title":"Book a Cleaning Service with Ease",
+    "text": "Whether it's a deep clean, regular maintenance, or post-renovation — we’re here to make your space shine. Simply choose the type of service, pick a convenient date, and select a professional. We’ll handle therest."
+  },
+  "career": {
+    "title":"Apply for a Position",
+    "text": "We’re excited that you’re interested in joining our team! Please complete the form below so we can learn more about you and your experience."
+  },
+  "contacts": {
+    "title":"Got any questions?",
+    "text": "If you have any questions or need further information, feel free to reach out using the form below."
+  },
+  "booking": {
+    "title":"Book Your Cleaning Service",
+    "text": "Fill out the form step by step to schedule your professional cleaning service. Choose a date, leave special requests, and select your preferred cleaner."
+  }
+}

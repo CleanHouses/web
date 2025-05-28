@@ -1,27 +1,20 @@
 @use "../../styles/abstracts" as *;
 
+
 .home {
-  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  //background: url('https://eumpyo24vdz.exactdn.com/wp-content/uploads/2024/02/San-Franciso-deep-cleaning.webp') no-repeat center center;
-  //background-size: cover;
 }
 
-//.home::before {
-//  content: "";
-//  position: absolute;
-//  inset: 0;
-//  background-color: rgba(0, 0, 0, 0.4); /* степень затемнения */
-//  z-index: 1;
-//}
 
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .home_img {
@@ -40,4 +33,29 @@
   width: 300px;
   margin-left: 5rem;
   z-index: 11;
+}
+
+
+@media screen and (max-width: $ipad) {
+  .home {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .home_name {
+    font-size: $fs-h2;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+
+  .introWrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+  }
+  .home_name {
+    font-size: $fs-h3;
+  }
 }

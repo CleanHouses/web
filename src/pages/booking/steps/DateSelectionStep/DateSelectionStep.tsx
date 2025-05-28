@@ -31,7 +31,7 @@ export const DateSelectionStep = ({ form, setForm, nextStep, prevStep }: any) =>
         withCellSpacing
         value={form.dates || []}
         onChange={(value) => setForm((f: any) => ({ ...f, dates: value }))}
-        size="xl"
+        size="lg"
         classNames={{
           day: styles.day,
         }}

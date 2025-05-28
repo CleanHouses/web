@@ -3,15 +3,15 @@ import {
   Box,
   Card,
   Group,
-  Rating,
-  Text,
-  Title,
-} from '@mantine/core';
+  Rating, Stack,
+  Text, Title
+} from "@mantine/core";
 import { motion } from 'framer-motion';
+import styles from './Testimonials.module.scss';
 
 const testimonials = [
   {
-    name: 'Anna Martínez',
+    name: 'Natalia Martínez',
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
     rating: 5,
     text: 'Excelente servicio de limpieza. Muy profesionales y atentos a los detalles.',
@@ -32,8 +32,11 @@ const testimonials = [
 
 export const  Testimonials = () => {
   return (
-    <Box pos="absolute" right="5rem">
-      <Box>
+    <Box className={styles.testimonials}>
+        <Title order={5} mb="sm">
+          People Love Us!
+        </Title>
+        <Box className={styles.content}>
         {testimonials.map((t, i) => (
           <motion.div
             key={t.name}
@@ -56,7 +59,7 @@ export const  Testimonials = () => {
             </Card>
           </motion.div>
         ))}
+        </Box>
       </Box>
-    </Box>
   );
 }

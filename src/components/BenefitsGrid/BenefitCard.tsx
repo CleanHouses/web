@@ -13,6 +13,7 @@ export const BenefitCard = ({ icon, title, description }: BenefitCardProps) => {
       shadow="md"
       padding="md"
       radius="xl"
+      w="300"
       style={{
         background: 'rgba(255, 255, 255, 0.15)',
         backdropFilter: 'blur(10px)',

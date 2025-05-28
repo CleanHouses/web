@@ -1,0 +1,14 @@
+@use "../../styles/abstracts" as *;
+
+.title {
+  font-size: $fs-h1;
+
+  @media (max-width: $ipad) {
+    font-size: $fs-h2;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: $fs-h3;
+  }
+}
+

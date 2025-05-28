@@ -2,7 +2,7 @@ import { IProduct } from "../interface";
 
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "Apartments",
+    title: "Apartments / House",
     price: 300,
     isSoon: false,
     id: 1,
@@ -13,13 +13,13 @@ export const PRODUCT_MOCK: IProduct[] = [
     tags: ["house", "cleaning"],
   },
   {
-    title: "House",
+    title: "Сarpet",
     price: 300,
     isSoon: false,
     id: 2,
     category: "House cleaning",
     images: {
-      main:  "https://transform.octanecdn.com/fit/1600x900/https://octanecdn.com/maidprocom/maidprocom_517957228.jpg",
+      main:  "https://i5.walmartimages.com/seo/TWINNIS-Boho-Area-Rug-Vintage-Tribal-Carpet-Anti-Slip-Rug-Washable-Persian-Carpet-for-Living-Room-Bedroom-Red-5-x8_0e728c9b-166c-4658-8254-5688e585936a.0764fae229334a747f1f531f18140ae3.jpeg",
     },
 
     tags: ["house", "cleaning"],

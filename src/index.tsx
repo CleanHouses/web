@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import "./styles/index.scss";
+import './i18n';
 import {BrowserRouter} from "react-router-dom";
 
 import App from "./App";

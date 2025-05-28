@@ -8,9 +8,10 @@ import { PRODUCT_MOCK, SOON } from "../../data";
 
 import styles from "./product.module.scss";
 import { useMediaQuery } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
 
 export const Product: FC<IProductProps> = () => {
-
+  const { t } = useTranslation();
   const cards = [...PRODUCT_MOCK, ...SOON].map((product, i) => (
     <motion.div
       key={product.id}
@@ -26,9 +27,7 @@ export const Product: FC<IProductProps> = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.content}>
-        <PageHeader title="Book a Cleaning Service with Ease" text="Whether it's a deep clean, regular maintenance, or post-renovation — we’re here to make your space shine.
-              Simply choose the type of service, pick a convenient date, and select a professional. We’ll handle the
-              rest."/>
+        <PageHeader title={t("product.title")} text={t("product.text")}/>
         <Grid gutter="lg">
 
           {cards.slice(0, 3).map((card, index) => (
