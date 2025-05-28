@@ -13,7 +13,7 @@ export const AnimatedRoutes = () => {
         <Route path="/contact" element={<Contacts />} />
         <Route path="/services" element={<Product />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/booking/:pruductId" element={<BookingStepper />} />
+        <Route path="/services/booking/:pruductId" element={<BookingStepper />} />
       </Routes>
     </AnimatePresence>
   );

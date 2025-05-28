@@ -1,10 +1,9 @@
-import { TextInput, Textarea, Button, Group, Text, Stack, Card, Tooltip } from "@mantine/core";
+import { TextInput, Textarea, Group, Text, Stack, Tooltip } from "@mantine/core";
 import { IconUser, IconAt, IconPhone, IconHome, IconMail } from "@tabler/icons-react";
-import { motion } from "framer-motion";
 import { useState } from "react";
-import styles from "../../BookingStepper.module.scss";
 import { StepsFooter } from "../../../../components";
 import { useMediaQuery } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
 
 export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
   const [errors, setErrors] = useState({
@@ -14,7 +13,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
     phone: false,
     address: false,
   });
-
+  const { t } = useTranslation();
   const validate = () => {
     const newErrors = {
       firstName: form.firstName.trim() === "",
@@ -36,7 +35,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
   return (
     <Stack gap="md">
       <TextInput
-        label={<LabelWithIcon icon={<IconUser size={14} />} text="First Name" required />}
+        label={<LabelWithIcon icon={<IconUser size={14} />} text={t("common.firstName")} required />}
         value={form.firstName}
         onChange={(e:any) => setForm((f: any) => ({ ...f, firstName: e.target.value }))}
         error={errors.firstName && "First name is required"}
@@ -44,7 +43,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       />
 
       <TextInput
-        label={<LabelWithIcon icon={<IconUser size={14} />} text="Last Name" required />}
+        label={<LabelWithIcon icon={<IconUser size={14} />} text={t("common.lastName")} required />}
         value={form.lastName}
         onChange={(e: any) => setForm((f: any) => ({ ...f, lastName: e.target.value }))}
         error={errors.lastName && "Last name is required"}
@@ -52,7 +51,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       />
 
       <TextInput
-        label={<LabelWithIcon icon={<IconAt size={14} />} text="Email" required />}
+        label={<LabelWithIcon icon={<IconAt size={14} />} text={t("common.email")} required />}
         value={form.email}
         onChange={(e: any) => setForm((f: any) => ({ ...f, email: e.target.value }))}
         error={errors.email && "Email is required"}
@@ -60,7 +59,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       />
 
       <TextInput
-        label={<LabelWithIcon icon={<IconPhone size={14} />} text="Phone" required />}
+        label={<LabelWithIcon icon={<IconPhone size={14} />} text={t("common.phone")} required />}
         value={form.phone}
         onChange={(e: any) => setForm((f: any) => ({ ...f, phone: e.target.value }))}
         error={errors.phone && "Phone number is required"}
@@ -68,7 +67,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       />
 
       <TextInput
-        label={<LabelWithIcon icon={<IconHome size={14} />} text="Address" required />}
+        label={<LabelWithIcon icon={<IconHome size={14} />} text={t("common.address")} required />}
         value={form.address}
         onChange={(e: any) => setForm((f: any) => ({ ...f, address: e.target.value }))}
         error={errors.address && "Address is required"}
@@ -76,7 +75,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       />
 
       <Tooltip
-        label="Could you please provide a bit more detail about the space that needs to be cleaned?"
+        label={t("booking.detailText")}
         position="left"
         offset={4}
         transitionProps={{ duration: 200 }}
@@ -86,7 +85,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         opened={!isMobile}
         w={220}>
         <Textarea
-          label={<LabelWithIcon icon={<IconMail size={14} />} text="Comment" required />}
+          label={<LabelWithIcon icon={<IconMail size={14} />} text={t("common.comment")} required />}
           placeholder="Any additional details..."
           value={form.comment}
           onChange={(e: any) => setForm((f: any) => ({ ...f, comment: e.target.value }))}

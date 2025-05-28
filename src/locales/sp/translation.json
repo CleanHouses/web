@@ -10,19 +10,65 @@
     "bookOnline": "Reservar en línea"
   },
   "product": {
-    "title": "Reserva un Servicio de Limpieza Fácilmente",
-    "text": "Ya sea una limpieza profunda, mantenimiento regular o limpieza post-renovación — estamos aquí para hacer que tu espacio brille. Simplemente elige el tipo de servicio, selecciona una fecha conveniente y elige un profesional. Nosotros nos encargamos del resto."
+    "title": "Reserva un Servicio de Limpieza con Facilidad",
+    "text": "Ya sea una limpieza profunda, mantenimiento regular o limpieza después de una renovación, estamos aquí para hacer que tu espacio brille. Simplemente elige el tipo de servicio, selecciona una fecha conveniente y elige un profesional. Nosotros nos encargamos del resto."
   },
   "career": {
-    "title": "Postúlate para un Puesto",
-    "text": "¡Nos alegra que estés interesado en unirte a nuestro equipo! Por favor, completa el siguiente formulario para que podamos conocerte mejor y saber más sobre tu experiencia."
+    "title": "Solicita un Puesto",
+    "text": "¡Nos alegra que estés interesado en unirte a nuestro equipo! Por favor, completa el formulario a continuación para que podamos conocerte mejor y saber más sobre tu experiencia."
   },
   "contacts": {
     "title": "¿Tienes preguntas?",
     "text": "Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos usando el formulario a continuación."
   },
   "booking": {
+    "detailText": "¿Podrías proporcionarnos más detalles sobre el espacio que necesita limpieza?",
+    "selectAvailableDates": "Selecciona fechas disponibles",
+    "selectPreferredEmployees": "Selecciona empleados preferidos",
+    "choosePreferredStaff": "Elige el personal preferido",
+    "listBelow": "O selecciona de la siguiente lista:",
+    "verify": "Por favor, verifica que todos los datos sean correctos antes de enviar tu reserva.",
     "title": "Reserva Tu Servicio de Limpieza",
-    "text": "Completa el formulario paso a paso para programar tu servicio de limpieza profesional. Elige una fecha, deja instrucciones especiales y selecciona a tu limpiador preferido."
+    "text": "Completa el formulario paso a paso para programar tu servicio de limpieza profesional. Elige una fecha, deja solicitudes especiales y selecciona a tu limpiador preferido."
+  },
+  "common": {
+    "peopleLoveUs": "¡A la gente le encantamos!",
+    "confirmSubmit": "Confirmar y Enviar",
+    "bookNow": "Reservar ahora",
+    "soon": "Pronto",
+    "apartmentsHouse": "Apartamentos / Casa",
+    "carpet": "Alfombra",
+    "office": "Oficina",
+    "phone": "Phone",
+    "roof": "Techo",
+    "goodPrice": "Buen precio",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "address": "Dirección",
+    "comment": "Comentario",
+    "back": "Atrás",
+    "dates": "Fechas",
+    "employees": "Empleados",
+    "next": "Siguiente",
+    "whyChoose": {
+      "title": "¿Por Qué Elegir Nuestro Servicio de Limpieza?",
+      "results": {
+        "title": "Resultados Impecables",
+        "text": "Tu espacio brillará con nuestro enfoque de limpieza detallado y profesional."
+      },
+      "timeSaving": {
+        "title": "Ahorro de Tiempo",
+        "text": "Nuestro servicio rápido y eficiente te permite enfocarte en lo que realmente importa."
+      },
+      "trustedProfessionals": {
+        "title": "Profesionales de Confianza",
+        "text": "Todos nuestros limpiadores tienen verificación de antecedentes, están capacitados y asegurados."
+      },
+      "EcoFriendly": {
+        "title": "Productos Ecológicos",
+        "text": "Usamos productos de limpieza seguros y ecológicos para un entorno saludable."
+      }
+    }
   }
 }

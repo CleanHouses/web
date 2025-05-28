@@ -1,12 +1,12 @@
-import { SimpleGrid, Container, Title, Stack } from "@mantine/core";
+import {  Title, Stack } from "@mantine/core";
 import { BenefitCard } from "./BenefitCard";
 import { IconSparkles, IconClockHour4, IconShieldCheck, IconLeaf } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useMediaQuery } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
 
 export const BenefitsGrid = () => {
-
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,     // анимация один раз
     threshold: 0.2,        // сработает, когда 20% элемента в зоне видимости
@@ -15,30 +15,30 @@ export const BenefitsGrid = () => {
   const benefits = [
     {
       icon: <IconSparkles />,
-      title: "Spotless Results",
-      description: "Your space will shine with our detailed and professional cleaning approach.",
+      title: t("common.whyChoose.results.title"),
+      description:  t("common.whyChoose.results.text"),
     },
     {
       icon: <IconClockHour4 />,
-      title: "Time-Saving Service",
-      description: "Let us handle the cleaning while you focus on what matters most.",
+      title: t("common.whyChoose.timeSaving.title"),
+      description:  t("common.whyChoose.timeSaving.text"),
     },
     {
       icon: <IconShieldCheck />,
-      title: "Trusted Professionals",
-      description: "All cleaners are background-checked, trained, and insured.",
+      title: t("common.whyChoose.trustedProfessionals.title"),
+      description:  t("common.whyChoose.trustedProfessionals.text"),
     },
     {
       icon: <IconLeaf />,
-      title: "Eco-Friendly Products",
-      description: "We use safe, green cleaning supplies for a healthy environment.",
+      title: t("common.whyChoose.EcoFriendly.title"),
+      description:  t("common.whyChoose.EcoFriendly.text"),
     },
   ];
 
   return (
     <Stack>
       <Title order={5} mt="lg" ta="center">
-        Why Choose Our Cleaning Service?
+        {t("common.whyChoose.title")}
       </Title>
       {benefits.map((benefit, index) => (
         <motion.div

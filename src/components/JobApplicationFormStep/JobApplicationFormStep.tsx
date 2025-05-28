@@ -12,7 +12,7 @@ import { useState } from 'react';
 import { Button } from "../_ui";
 import { useMediaQuery } from "@mantine/hooks";
 
-export const JobApplicationFormStep = ({ form, setForm }: any) => {
+export const JobApplicationFormStep = ({ form, setForm, onSubmit }: any) => {
   const [errors, setErrors] = useState({
     firstName: false,
     lastName: false,
@@ -120,7 +120,7 @@ export const JobApplicationFormStep = ({ form, setForm }: any) => {
           </Stack>
 
           <Group justify="flex-end" mt="md">
-            <Button radius="lg">
+            <Button radius="lg" onClick={onSubmit}>
               Submit Application
             </Button>
           </Group>

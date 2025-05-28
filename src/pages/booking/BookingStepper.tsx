@@ -72,11 +72,7 @@ export const BookingStepper = () => {
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.wrapper}>
       <PageHeader  title={t("booking.title")}  text={t("contacts.text")}/>
       {active === 4 ? (
-        <Center>
-          <Card mt="lg" radius="lg" shadow="lg" padding="md" w={400}>
-            <Success restart={restart} />
-          </Card>
-        </Center>
+        <Success onSubmit={restart} />
       ) : (
         <Group gap="lg" justify="center" className={styles.groupResponsive}>
           <Stack w="45%" style={{minWidth: 350}}>

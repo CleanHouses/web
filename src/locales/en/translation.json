@@ -22,7 +22,53 @@
     "text": "If you have any questions or need further information, feel free to reach out using the form below."
   },
   "booking": {
+    "detailText": "Could you please provide a bit more detail about the space that needs to be cleaned?",
+    "selectAvailableDates": "Select available dates",
+    "selectPreferredEmployees": "Select preferred employees",
+    "choosePreferredStaff": "Choose preferred staff",
+    "listBelow": "Or select from the list below:",
+    "verify": "Please verify all details are correct before submitting your booking.",
     "title":"Book Your Cleaning Service",
     "text": "Fill out the form step by step to schedule your professional cleaning service. Choose a date, leave special requests, and select your preferred cleaner."
+  },
+  "common": {
+    "peopleLoveUs": "People Love Us!",
+    "confirmSubmit": "Confirm & Submit",
+    "bookNow": "Book now",
+    "soon": "Soon",
+    "apartmentsHouse": "Apartments / House",
+    "carpet": "Сarpet",
+    "office": "Office",
+    "roof": "Roof",
+    "goodPrice": "Good Price",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "comment": "Comment",
+    "back": "Back",
+    "dates": "Dates",
+    "employees": "Employees",
+    "next": "Next",
+    "whyChoose": {
+      "title":"Why Choose Our Cleaning Service?",
+      "results" : {
+        "title": "Spotless Results",
+        "text": "Your space will shine with our detailed and professional cleaning approach."
+      },
+      "timeSaving" : {
+        "title": "Time-Saving Service",
+        "text": "Your space will shine with our detailed and professional cleaning approach."
+      },
+      "trustedProfessionals" : {
+        "title": "Trusted Professionals",
+        "text": "All cleaners are background-checked, trained, and insured."
+      },
+      "EcoFriendly" : {
+        "title": "Eco-Friendly Products",
+        "text": "We use safe, green cleaning supplies for a healthy environment."
+      }
+    }
   }
 }

@@ -23,7 +23,7 @@ export const ServiceCard: FC<IServiceCard> = ({id, title, description, isSoon, p
       withBorder
       radius="lg"
       className={styles.container}
-      onClick={() => (isSoon ? "" : navigate(`/booking/${id}`))}
+      onClick={() => (isSoon ? "" : navigate(`/services/booking/${id}`))}
     >
       <Card.Section className={styles.imgWrapper}>
         <Image className={styles.img} src={pictureLink} />
@@ -44,7 +44,7 @@ export const ServiceCard: FC<IServiceCard> = ({id, title, description, isSoon, p
           pos="absolute"
           bottom="1rem"
           right="1rem"
-          onClick={() => (isSoon ? "" : navigate(`/booking/${id}`))}
+          onClick={() => (isSoon ? "" : navigate(`/services/booking/${id}`))}
           leftSection={<IconCalendarEvent size={18} />}
           radius="lg">
           {isSoon ? "Soon" : " Book now"}
