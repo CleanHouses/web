@@ -1,10 +1,11 @@
 import { Button, Card, Center, Group, Stack, Text, ThemeIcon } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Success = ({onSubmit}:{onSubmit?: any}) => {
   const navigate = useNavigate();
-
+  const {t} = useTranslation();
   const handleClick = () => {
     if (onSubmit) {
       onSubmit();
@@ -21,15 +22,15 @@ export const Success = ({onSubmit}:{onSubmit?: any}) => {
           </ThemeIcon>
 
           <Text ta="center" fw={600} size="lg">
-            Thank you for using our service!
+            {t("common.thankYou")}
           </Text>
           <Text ta="center" size="sm" c="dimmed">
-            Our manager will call you shortly.
+            {t("common.willCallYou")}
           </Text>
 
           <Group mt="md">
             <Button variant="outline" color="#6c6ce5" onClick={handleClick} radius="lg">
-              Booking
+              {t("home.bookOnline")}
             </Button>
           </Group>
         </Stack>

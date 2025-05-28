@@ -2,7 +2,7 @@ import { IProduct } from "../interface";
 
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "Apartments / House",
+    title: "apartmentsHouse",
     price: 300,
     isSoon: false,
     id: 1,
@@ -13,7 +13,7 @@ export const PRODUCT_MOCK: IProduct[] = [
     tags: ["house", "cleaning"],
   },
   {
-    title: "Сarpet",
+    title: "carpet",
     price: 300,
     isSoon: false,
     id: 2,
@@ -25,7 +25,7 @@ export const PRODUCT_MOCK: IProduct[] = [
     tags: ["house", "cleaning"],
   },
   {
-    title: "Office",
+    title: "office",
     price: 300,
     isSoon: false,
     id: 3,
@@ -40,7 +40,7 @@ export const PRODUCT_MOCK: IProduct[] = [
 
 export const SOON = [
   {
-    title: "Roof",
+    title: "roof",
     price: 150,
     isSoon: true,
     id: 4,

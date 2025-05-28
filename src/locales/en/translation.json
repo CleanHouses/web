@@ -31,14 +31,23 @@
     "title":"Book Your Cleaning Service",
     "text": "Fill out the form step by step to schedule your professional cleaning service. Choose a date, leave special requests, and select your preferred cleaner."
   },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "career": "Career",
+    "contact": "Contacts"
+  },
   "common": {
     "peopleLoveUs": "People Love Us!",
-    "confirmSubmit": "Confirm & Submit",
+    "thankYou": "Thank you for using our service!",
+    "willCallYou": "Our manager will call you shortly.",
+    "Confirm & Submit": "Confirm & Submit",
     "bookNow": "Book now",
     "soon": "Soon",
     "apartmentsHouse": "Apartments / House",
     "carpet": "Сarpet",
     "office": "Office",
+    "A/C": "A/C",
     "roof": "Roof",
     "goodPrice": "Good Price",
     "firstName": "First Name",

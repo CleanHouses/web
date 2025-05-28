@@ -7,6 +7,7 @@ import React, { FC } from "react";
 import styles from "./service.module.scss";
 import { Button } from "../_ui";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export interface IServiceCard {
   isSoon?: boolean;
@@ -17,7 +18,8 @@ export interface IServiceCard {
 }
 
 export const ServiceCard: FC<IServiceCard> = ({id, title, description, isSoon, pictureLink}) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const {t} = useTranslation();
   return (
     <Card
       withBorder
@@ -28,12 +30,12 @@ export const ServiceCard: FC<IServiceCard> = ({id, title, description, isSoon, p
       <Card.Section className={styles.imgWrapper}>
         <Image className={styles.img} src={pictureLink} />
         <div className={styles.badges}>
-          <Badge color="hsl(353, 100%, 65%)">{title}</Badge>
+          <Badge color="hsl(353, 100%, 65%)">{t(`common.${title}`)}</Badge>
           <Badge
             leftSection={<IconThumbUp size={15} />}
             color="hsl(43, 100%, 68%)"
           >
-            Good price
+            {t("common.goodPrice")}
           </Badge>
         </div>
         <Text size="sm" fw={500} className={styles.description}>
@@ -47,7 +49,7 @@ export const ServiceCard: FC<IServiceCard> = ({id, title, description, isSoon, p
           onClick={() => (isSoon ? "" : navigate(`/services/booking/${id}`))}
           leftSection={<IconCalendarEvent size={18} />}
           radius="lg">
-          {isSoon ? "Soon" : " Book now"}
+          {isSoon ? t("common.soon") : t("common.bookNow")}
         </Button>
       </Card.Section>
     </Card>

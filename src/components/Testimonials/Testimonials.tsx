@@ -8,6 +8,7 @@ import {
 } from "@mantine/core";
 import { motion } from 'framer-motion';
 import styles from './Testimonials.module.scss';
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -31,10 +32,11 @@ const testimonials = [
 ];
 
 export const  Testimonials = () => {
+  const { t } = useTranslation();
   return (
     <Box className={styles.testimonials}>
         <Title order={5} mb="sm">
-          People Love Us!
+          {t("common.peopleLoveUs")}
         </Title>
         <Box className={styles.content}>
         {testimonials.map((t, i) => (

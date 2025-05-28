@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "career": "Carreras",
+    "contact": "Contacto"
+  },
   "home": {
     "title": "Servicios de Limpieza",
     "offer": {
@@ -33,7 +39,9 @@
   },
   "common": {
     "peopleLoveUs": "¡A la gente le encantamos!",
-    "confirmSubmit": "Confirmar y Enviar",
+    "thankYou": "¡Gracias por usar nuestro servicio!",
+    "willCallYou": "Nuestro gerente te llamará en breve.",
+    "Confirm & Submit": "Confirmar y Enviar",
     "bookNow": "Reservar ahora",
     "soon": "Pronto",
     "apartmentsHouse": "Apartamentos / Casa",
@@ -41,6 +49,7 @@
     "office": "Oficina",
     "phone": "Phone",
     "roof": "Techo",
+    "A/C": "A/C",
     "goodPrice": "Buen precio",
     "firstName": "Nombre",
     "lastName": "Apellido",

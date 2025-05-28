@@ -11,9 +11,10 @@ import {
 import styles from "../../BookingStepper.module.scss"
 import React from "react";
 import { StepsFooter } from "../../../../components";
+import { useTranslation } from "react-i18next";
 
 export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
-
+  const {t} = useTranslation();
   const handleSubmit = () => {
     nextStep();
   };
@@ -24,8 +25,6 @@ export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
     }
     return '';
   };
-
-  console.log('form', form);
 
   return (
     <div className={styles.formStep}>
@@ -41,7 +40,7 @@ export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
           <Group gap={4} mb="sm" align="center">
             <IconCalendarEvent size={16} />
             <Text fw={500}>
-              Dates
+              {t("common.dates")}
             </Text>
           </Group>
           <Group gap={3}>{form.dates.map((d: Date, i: number) => (
@@ -56,7 +55,7 @@ export const ReviewStep = ({ form, prevStep, nextStep }: any) => {
           <Group gap={4} mb="sm" align="center">
             <IconUsers size={16} />
             <Text fw={500}>
-              Employees
+              {t("common.employees")}
             </Text>
           </Group>
           <Group gap={3}>{form.employees.map((e: string, index: string) => (

@@ -11,3 +11,4 @@ export * from "./Testimonials/Testimonials";
 export * from "./ServiceCard/ServaceCard";
 export * from "./JobApplicationFormStep/JobApplicationFormStep";
 export * from "./StepsFooter/StepsFooter";
+export * from "./Success/Success";
