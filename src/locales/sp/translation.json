@@ -27,6 +27,22 @@
     "title": "¿Tienes preguntas?",
     "text": "Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos usando el formulario a continuación."
   },
+  "error": {
+    "date": "Por favor, seleccione al menos una fecha.",
+    "email": "El correo electrónico es obligatorio",
+    "address": "La dirección es obligatoria",
+    "phone": "El número de teléfono es obligatorio",
+    "firstName": "El nombre es obligatorio",
+    "lastName": "El apellido es obligatorio"
+  },
+  "placeholder": {
+    "firstName": "Ingrese su nombre",
+    "lastName": "Ingrese su apellido",
+    "email": "ejemplo@correo.com",
+    "phone": "+1 (555) 123-4567",
+    "additionalDetail": "Cualquier detalle adicional...",
+    "address": "Calle, número, apartamento"
+  },
   "booking": {
     "detailText": "¿Podrías proporcionarnos más detalles sobre el espacio que necesita limpieza?",
     "selectAvailableDates": "Selecciona fechas disponibles",
@@ -60,7 +76,7 @@
     "dates": "Fechas",
     "employees": "Empleados",
     "next": "Siguiente",
-    "whyChoose": {
+  "whyChoose": {
       "title": "¿Por Qué Elegir Nuestro Servicio de Limpieza?",
       "results": {
         "title": "Resultados Impecables",

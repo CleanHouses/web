@@ -37,6 +37,22 @@
     "career": "Career",
     "contact": "Contacts"
   },
+  "error": {
+    "email": "Email is required",
+    "date": "Please select at least one date.",
+    "address": "Address is required",
+    "phone": "Phone number is required",
+    "firstName": "First name is required",
+    "lastName": "Last name is required"
+  },
+  "placeholder": {
+    "firstName": "Enter your first name",
+    "lastName": "Enter your last name",
+    "email": "example@email.com",
+    "phone": "+1 (555) 123-4567",
+    "additionalDetail": "Any additional details...",
+    "address": "Street, building, apartment"
+  },
   "common": {
     "peopleLoveUs": "People Love Us!",
     "thankYou": "Thank you for using our service!",

@@ -37,8 +37,9 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
       <TextInput
         label={<LabelWithIcon icon={<IconUser size={14} />} text={t("common.firstName")} required />}
         value={form.firstName}
-        onChange={(e:any) => setForm((f: any) => ({ ...f, firstName: e.target.value }))}
-        error={errors.firstName && "First name is required"}
+        onChange={(e: any) => setForm((f: any) => ({ ...f, firstName: e.target.value }))}
+        error={errors.firstName && t("error.firstName")}
+        placeholder={t("placeholder.firstName")}
         radius="lg"
       />
 
@@ -46,7 +47,8 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         label={<LabelWithIcon icon={<IconUser size={14} />} text={t("common.lastName")} required />}
         value={form.lastName}
         onChange={(e: any) => setForm((f: any) => ({ ...f, lastName: e.target.value }))}
-        error={errors.lastName && "Last name is required"}
+        error={errors.lastName && t("error.lastName")}
+        placeholder={t("placeholder.lastName")}
         radius="lg"
       />
 
@@ -54,7 +56,8 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         label={<LabelWithIcon icon={<IconAt size={14} />} text={t("common.email")} required />}
         value={form.email}
         onChange={(e: any) => setForm((f: any) => ({ ...f, email: e.target.value }))}
-        error={errors.email && "Email is required"}
+        error={errors.email && t("error.email")}
+        placeholder={t("placeholder.email")}
         radius="lg"
       />
 
@@ -62,7 +65,8 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         label={<LabelWithIcon icon={<IconPhone size={14} />} text={t("common.phone")} required />}
         value={form.phone}
         onChange={(e: any) => setForm((f: any) => ({ ...f, phone: e.target.value }))}
-        error={errors.phone && "Phone number is required"}
+        error={errors.phone && t("error.phone")}
+        placeholder={t("placeholder.phone")}
         radius="lg"
       />
 
@@ -70,9 +74,11 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         label={<LabelWithIcon icon={<IconHome size={14} />} text={t("common.address")} required />}
         value={form.address}
         onChange={(e: any) => setForm((f: any) => ({ ...f, address: e.target.value }))}
-        error={errors.address && "Address is required"}
+        error={errors.address && t("error.address")}
+        placeholder={t("placeholder.address")}
         radius="lg"
       />
+
 
       <Tooltip
         label={t("booking.detailText")}
@@ -86,7 +92,7 @@ export const PersonalInfoStep = ({ form, setForm, nextStep }: any) => {
         w={220}>
         <Textarea
           label={<LabelWithIcon icon={<IconMail size={14} />} text={t("common.comment")} required />}
-          placeholder="Any additional details..."
+          placeholder={t("placeholder.additionalDetail")}
           value={form.comment}
           onChange={(e: any) => setForm((f: any) => ({ ...f, comment: e.target.value }))}
           radius="lg"
